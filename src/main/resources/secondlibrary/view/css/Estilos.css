@@ -16,10 +16,32 @@
 
 .text-color{
     -fx-text-fill: #FBEEE7;
+    -fx-font-family: "Segoe UI";
+}
+
+.text-color-white{
+    -fx-text-fill: #160A04;
+    -fx-font: 20 "Segoe UI";
+}
+
+.text-color-accent{
+    -fx-text-fill: #24BED7;
+    -fx-font-weight: bold;
+    -fx-font: 20 "Segoe UI";
+}
+
+.text-color-primary {
+    -fx-text-fill: #17BE5F;
+    -fx-font-weight: bold;
+    -fx-font: 20 "Segoe UI";
 }
 
 .radius{
-    -fx-background-radius: 20;
+    -fx-background-radius: 6;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
 }
 
 .input{
