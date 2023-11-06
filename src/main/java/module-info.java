@@ -12,4 +12,6 @@ module secondlibrary.secondlibrary {
 
     opens secondlibrary.main to javafx.fxml;
     exports secondlibrary.main;
+    exports secondlibrary.controller;
+    opens secondlibrary.controller to javafx.fxml;
 }

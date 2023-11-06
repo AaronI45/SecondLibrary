@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Registrarte">
+         <VBox.margin>
+            <Insets right="620.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label text="Por favor ingrese la información en los campos correspondientes">
+         <VBox.margin>
+            <Insets right="280.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="40.0" prefWidth="970.0">
+         <children>
+            <TextField promptText="Nombre(s)">
+               <HBox.margin>
+                  <Insets right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <TextField promptText="Apellido paterno">
+               <HBox.margin>
+                  <Insets right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <TextField promptText="Apellido materno">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <TextField prefHeight="37.0" prefWidth="445.0" promptText="Nombre de usuario">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <PasswordField prefHeight="37.0" prefWidth="445.0" promptText="Contraseña">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <PasswordField prefHeight="37.0" prefWidth="445.0" promptText="Confirmar contraseña">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <TextField prefHeight="37.0" prefWidth="445.0" promptText="Matrícula">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <ComboBox prefHeight="45.0" prefWidth="445.0" promptText="Facultad">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </ComboBox>
+      <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="180.0" text="Registrarse">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button mnemonicParsing="false" text="¿Ya tienes cuenta? Inicia sesión">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

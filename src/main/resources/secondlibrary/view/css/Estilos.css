@@ -1,0 +1,30 @@
+.primary-color{
+    -fx-background-color: #17BE5F;
+}
+
+.secondary-color{
+    -fx-background-color: #5D3C23;
+}
+
+.accent-color{
+    -fx-background-color: #24BED7;
+}
+
+.background-color{
+    -fx-background-color: #2C1908;
+}
+
+.text-color{
+    -fx-text-fill: #FBEEE7;
+}
+
+.radius{
+    -fx-background-radius: 20;
+}
+
+.input{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #898989
+    -fx-
+}
+/*color para texto FBEEE7*/
