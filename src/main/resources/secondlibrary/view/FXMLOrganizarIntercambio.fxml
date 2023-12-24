@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="secondlibrary.controller.FXMLOrganizarIntercambioController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4eef8" height="270.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4eef8" height="270.0" layoutX="14.0" layoutY="306.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
+      <ImageView fitHeight="100.0" fitWidth="130.0" layoutX="89.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/book-open-line.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="112.0" fitWidth="100.0" layoutX="89.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user-line.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="101.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo del libro" />
+      <Text layoutX="118.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autores" />
+      <Text layoutX="119.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edicion" />
+      <Text layoutX="116.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <Text layoutX="114.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricula" />
+      <Text layoutX="116.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facultad" />
+      <Text layoutX="109.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calificacion" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4eef8" height="528.0" layoutX="271.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="684.0" />
+      <TextField layoutX="293.0" layoutY="62.0" prefHeight="25.0" prefWidth="640.0" />
+      <Text layoutX="293.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intercambia por:" />
+      <Text layoutX="293.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lugar de intercambio:" />
+      <TextField layoutX="293.0" layoutY="137.0" prefHeight="25.0" prefWidth="640.0" />
+      <Text layoutX="293.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de intercambio:" />
+      <TextField layoutX="293.0" layoutY="207.0" prefHeight="25.0" prefWidth="640.0" />
+      <Text layoutX="293.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora de intercambio:" />
+      <TextField layoutX="293.0" layoutY="283.0" prefHeight="25.0" prefWidth="640.0" />
+      <Button layoutX="503.0" layoutY="417.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="220.0" text="Organizar intercambio" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" fx:id="nombre" prefHeight="590.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="secondlibrary.controller.FXMLPerfilUsuarioController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4eef8" height="555.0" layoutX="14.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user-line.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="116.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+      <Text fx:id="apellidoPaterno" layoutX="118.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="apP" />
+      <Text fx:id="apellidoMaterno" layoutX="117.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="apM" />
+      <Text fx:id="matricula" layoutX="117.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mat" />
+      <Text layoutX="99.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calificación" />
+      <Pane layoutX="285.0" layoutY="34.0" prefHeight="499.0" prefWidth="670.0" />
+      <Text layoutX="285.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publicaciones" />
+   </children>
+</AnchorPane>

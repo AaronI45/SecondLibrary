@@ -9,6 +9,7 @@ module secondlibrary.secondlibrary {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.base;
 
     opens secondlibrary.main to javafx.fxml;
     exports secondlibrary.main;
