@@ -10,6 +10,8 @@ module secondlibrary.secondlibrary {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.base;
+    requires java.logging;
+    requires org.json;
 
     opens secondlibrary.main to javafx.fxml;
     exports secondlibrary.main;
