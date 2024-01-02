@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -10,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.view.FXMLLoginController">
    <center>
       <VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" styleClass="background-color" stylesheets="@css/Estilos.css" BorderPane.alignment="CENTER">
          <children>
@@ -22,7 +27,7 @@
                   <Font name="Segoe UI Bold" size="64.0" />
                </font>
             </Label>
-            <TextField prefHeight="35.0" prefWidth="305.0" promptText="Usuario" stylesheets="@css/Estilos.css">
+            <TextField fx:id="tfUsuario" prefHeight="35.0" prefWidth="305.0" promptText="Usuario" stylesheets="@css/Estilos.css">
                <padding>
                   <Insets bottom="10.0" top="10.0" />
                </padding>
@@ -34,7 +39,7 @@
                   <String fx:value="text-color-white" />
                </styleClass>
             </TextField>
-            <PasswordField prefHeight="35.0" prefWidth="305.0" promptText="Contraseña" styleClass="radius">
+            <PasswordField fx:id="pfPassword" prefHeight="35.0" prefWidth="305.0" promptText="Contraseña" styleClass="radius">
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
@@ -57,7 +62,7 @@
                   <Font name="Segoe UI" size="12.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Iniciar sesión">
+            <Button fx:id="btnIniciarSesion" mnemonicParsing="false" onAction="#clicIniciarSesion" text="Iniciar sesión">
                <VBox.margin>
                   <Insets bottom="30.0" />
                </VBox.margin>
@@ -66,7 +71,7 @@
                   <String fx:value="text-color" />
                </styleClass>
             </Button>
-            <Button mnemonicParsing="false" stylesheets="@css/Estilos.css" text="¿No tienes una cuenta? Crea una nueva">
+            <Button fx:id="btnCrearCuenta" mnemonicParsing="false" onAction="#clicCrearCuenta" stylesheets="@css/Estilos.css" text="¿No tienes una cuenta? Crea una nueva">
                <VBox.margin>
                   <Insets bottom="30.0" />
                </VBox.margin>
