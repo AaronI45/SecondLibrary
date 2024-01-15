@@ -9,29 +9,54 @@ public class Usuario {
     public static final int BLOQUEADO = 3;
 
     private int idUsuario;
-    private int estado;
-    private int tipoUsuario;
+    private int idEstadoUsuario;
+    private int idRol;
     private String nombreUsuario;
-    private String contrasenia;
+    private String contrasena;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
     private String matricula;
     private String correo;
-    private String token;
+    private String tokenLogin;
     public Usuario(){}
 
-    public Usuario(int idUsuario, int estado, int tipoUsuario, String nombreUsuario, String nombre, String apellidoPaterno, String apellidoMaterno, String matricula, String correo, String token) {
+    public Usuario(int idUsuario, int idEstadoUsuario, int idRol, String nombreUsuario, String contrasena, String nombre, String apellidoPaterno, String apellidoMaterno, String matricula, String correo, String tokenLogin) {
         this.idUsuario = idUsuario;
-        this.estado = estado;
-        this.tipoUsuario = tipoUsuario;
+        this.idEstadoUsuario = idEstadoUsuario;
+        this.idRol = idRol;
         this.nombreUsuario = nombreUsuario;
+        this.contrasena = contrasena;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.matricula = matricula;
         this.correo = correo;
-        this.token = token;
+        this.tokenLogin = tokenLogin;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public int getIdEstadoUsuario() {
+        return idEstadoUsuario;
+    }
+
+    public void setIdEstadoUsuario(int idEstadoUsuario) {
+        this.idEstadoUsuario = idEstadoUsuario;
+    }
+
+    public int getIdRol() {
+        return idRol;
+    }
+
+    public void setIdRol(int idRol) {
+        this.idRol = idRol;
     }
 
     public String getNombreUsuario() {
@@ -42,12 +67,12 @@ public class Usuario {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getNombre() {
@@ -90,35 +115,11 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public int getTipoUsuario() {
-        return tipoUsuario;
+    public String getTokenLogin() {
+        return tokenLogin;
     }
 
-    public void setTipoUsuario(int tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
-
-    public int getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public int getEstado() {
-        return estado;
-    }
-
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
+    public void setTokenLogin(String tokenLogin) {
+        this.tokenLogin = tokenLogin;
     }
 }

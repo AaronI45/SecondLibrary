@@ -2,12 +2,14 @@ package secondlibrary.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import services.userService;
+
+import javafx.scene.Node;
+import secondlibrary.util.Utilidades;
+import servicios.ServicioUsuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 /**
@@ -32,13 +34,14 @@ public class FXMLLoginController implements Initializable {
     
     @FXML
     private void clicIniciarSesion(ActionEvent event) {
-        userService servicioUsuario = new userService();
+        ServicioUsuario servicioUsuario = new ServicioUsuario();
         String username = tfUsuario.getText();
         String password = pfContrasena.getText();
     }
 
     @FXML
     public void clicCrearCuenta(ActionEvent actionEvent) {
+        Utilidades.cambiarVentana("Registro de usuario",(Node)actionEvent.getSource(), "/secondlibrary/view/FXMLRegistrarUsuario.fxml");
     }
     
     private boolean existenCamposVaciosInicioSesion(){
