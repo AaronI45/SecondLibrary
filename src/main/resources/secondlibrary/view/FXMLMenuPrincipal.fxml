@@ -8,12 +8,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" styleClass="background-color" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -84,10 +84,27 @@
             <Region />
             <ScrollPane stylesheets="@Estilos.css" VBox.vgrow="ALWAYS">
                <content>
-                  <GridPane alignment="CENTER" styleClass="transparent" stylesheets="@Estilos.css">
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                  <GridPane alignment="CENTER" hgap="15.0" styleClass="transparent" stylesheets="@Estilos.css" vgap="15.0">
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="130.0" prefWidth="145.0" />
+                        <AnchorPane prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <AnchorPane prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                        <AnchorPane prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="3" />
+                        <AnchorPane prefHeight="130.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                     </children>
                   </GridPane>
                </content>
                <VBox.margin>
