@@ -1,28 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.web.*?>
-<?import javafx.scene.media.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.controller.FXMLMenuPrincipalController">
-   <children>
-      <ImageView fitHeight="80.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/book-marked-fill.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="btnPerfil" fitHeight="80.0" fitWidth="80.0" layoutX="890.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/user-line.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="tfBuscador" layoutX="620.0" layoutY="80.0" prefHeight="25.0" prefWidth="310.0" promptText="Buscar en SecondLibrary" />
-   </children>
-</AnchorPane>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" styleClass="background-color" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="110.0" prefWidth="970.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="227.0" layoutY="5.0" prefHeight="100.0" prefWidth="984.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Screenshot-2016-06-02-18.55.54.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label styleClass="label-header" stylesheets="@Estilos.css" text="Inicio">
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="127.0" prefWidth="62.0" HBox.hgrow="ALWAYS" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField prefHeight="35.0" prefWidth="50.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_search_144px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="0.0">
+                     <children>
+                        <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user-line.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Test" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <Region prefHeight="127.0" prefWidth="21.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="970.0">
+               <children>
+                  <Region prefHeight="48.0" prefWidth="166.0" />
+                  <Label styleClass="label-subheader" text="Encuentra el intercambio perfecto" />
+               </children>
+            </HBox>
+            <Region />
+            <ScrollPane stylesheets="@Estilos.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane alignment="CENTER" styleClass="transparent" stylesheets="@Estilos.css">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </ScrollPane>
+            <Region prefHeight="100.0" prefWidth="970.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="535.0" styleClass="background-list-element" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="100.0" layoutY="22.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="background-list-element" stylesheets="@Estilos.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="iv" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lbTitulo" styleClass="label-subheader" stylesheets="@Estilos.css" text="Titulo" />
+                  <Label fx:id="lbSubtitulo" styleClass="label-text" stylesheets="@Estilos.css" text="Subtitulo" />
+                  <Label fx:id="lbCuerpo" stylesheets="@EstilosUsuario.css" text="Label" />
+               </children>
+            </VBox>
+            <Label fx:id="lbEstado" styleClass="label-subheader" stylesheets="@Estilos.css">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

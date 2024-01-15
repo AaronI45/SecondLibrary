@@ -10,8 +10,8 @@ import java.io.IOException;
 public class SecondLibrary extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SecondLibrary.class.getResource("/secondlibrary/view/FXMLRegistrarUsuario.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/secondlibrary/view/FXMLLogin.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

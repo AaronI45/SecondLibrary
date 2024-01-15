@@ -21,11 +21,7 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private TextField tfUsuario;
     @FXML
-    private PasswordField pfPassword;
-    @FXML
-    private Button btnIniciarSesion;
-    @FXML
-    private Button btnCrearCuenta;
+    private PasswordField pfContrasena;
     /**
      * Initializes the controller class.
      */
@@ -38,19 +34,17 @@ public class FXMLLoginController implements Initializable {
     private void clicIniciarSesion(ActionEvent event) {
         userService servicioUsuario = new userService();
         String username = tfUsuario.getText();
-        String password = pfPassword.getText();
-        
+        String password = pfContrasena.getText();
     }
 
     @FXML
-    private void clicCrearCuenta(ActionEvent event) {
+    public void clicCrearCuenta(ActionEvent actionEvent) {
     }
-    
     
     private boolean existenCamposVaciosInicioSesion(){
         boolean existe = false;
         mensajeAlerta mensajeAlerta = new mensajeAlerta();
-        if(tfUsuario.getText().isEmpty()|| pfPassword.getText().isEmpty()){
+        if(tfUsuario.getText().isEmpty()|| pfContrasena.getText().isEmpty()){
             existe = true;
             mensajeAlerta.mostrarAlertaInformacionInvalida("Existen campos vacíos");
         }
