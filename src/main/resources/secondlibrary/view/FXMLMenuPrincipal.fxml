@@ -84,11 +84,8 @@
             <Region />
             <ScrollPane stylesheets="@Estilos.css" VBox.vgrow="ALWAYS">
                <content>
-                  <GridPane alignment="CENTER" hgap="15.0" styleClass="transparent" stylesheets="@Estilos.css" vgap="15.0">
+                  <GridPane alignment="CENTER" hgap="18.0" styleClass="transparent" stylesheets="@Estilos.css" vgap="15.0">
                      <columnConstraints>
-                        <ColumnConstraints />
-                        <ColumnConstraints />
-                        <ColumnConstraints />
                         <ColumnConstraints />
                      </columnConstraints>
                      <padding>
@@ -96,22 +93,14 @@
                      </padding>
                      <rowConstraints>
                         <RowConstraints />
-                        <RowConstraints />
                      </rowConstraints>
-                     <children>
-                        <AnchorPane prefHeight="130.0" prefWidth="145.0" />
-                        <AnchorPane prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                        <AnchorPane prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="2" />
-                        <AnchorPane prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                        <AnchorPane prefHeight="130.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                     </children>
                   </GridPane>
                </content>
                <VBox.margin>
                   <Insets left="100.0" right="100.0" />
                </VBox.margin>
             </ScrollPane>
-            <Region prefHeight="100.0" prefWidth="970.0" />
+            <Region prefHeight="40.0" prefWidth="970.0" />
          </children>
       </VBox>
    </center>
