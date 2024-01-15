@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="secondlibrary.controller.FXMLEditarUsuarioController">
+   <children>
+      <Label layoutX="54.0" layoutY="22.0" text="Edición de datos">
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="168.0" layoutY="80.0" text="Por favor ingrese la información en los campos correspondientes">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" fillHeight="false" layoutX="5.0" layoutY="103.0" prefHeight="40.0" prefWidth="970.0">
+         <children>
+            <TextField promptText="Nombre(s)">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="20.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField promptText="Apellido paterno">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="20.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField promptText="Apellido materno">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <TextField layoutX="268.0" layoutY="177.0" prefHeight="37.0" prefWidth="445.0" promptText="Nuevo nombre de usuario">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <PasswordField layoutX="268.0" layoutY="232.0" prefHeight="37.0" prefWidth="445.0" promptText="Nueva contraseña">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <PasswordField layoutX="268.0" layoutY="286.0" prefHeight="37.0" prefWidth="445.0" promptText="Confirmar nueva contraseña">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <TextField layoutX="268.0" layoutY="342.0" prefHeight="37.0" prefWidth="445.0" promptText="Matrícula">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <ComboBox layoutX="268.0" layoutY="399.0" prefHeight="45.0" prefWidth="445.0" promptText="Facultad">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </ComboBox>
+      <Button fx:id="btnModificar" layoutX="398.0" layoutY="492.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="180.0" text="Confirmar modificación">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </Button>
+   </children>
+</AnchorPane>
