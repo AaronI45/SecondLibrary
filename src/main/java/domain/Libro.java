@@ -5,15 +5,15 @@ import java.util.List;
 public class Libro {
     private String titulo;
 
-    private List<String> autores;
+    private String autor;
     private String editorial;
     private String edicion;
     private String imagenUrl;
     private String isbn;
 
-    public Libro(String titulo, List<String> autores, String editorial, String edicion, String imagenUrl, String isbn) {
+    public Libro(String titulo, String autor, String editorial, String edicion, String imagenUrl, String isbn) {
         this.titulo = titulo;
-        this.autores = autores;
+        this.autor = autor;
         this.editorial = editorial;
         this.edicion = edicion;
         this.imagenUrl = imagenUrl;
@@ -27,8 +27,8 @@ public class Libro {
         return titulo;
     }
 
-    public List<String> getAutores() {
-        return autores;
+    public String getAutor() {
+        return autor;
     }
 
     public String getEditorial() {

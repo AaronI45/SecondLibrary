@@ -6,18 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="160.0" prefWidth="170.0" styleClass="background-list-element" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.controller.FXMLOfertaIntercambioController">
+<AnchorPane onMouseClicked="#clicOferta" prefHeight="160.0" prefWidth="170.0" styleClass="background-list-element" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.controller.FXMLOfertaIntercambioController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="49.0" layoutY="-35.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" styleClass="background-list-element" stylesheets="@Estilos.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ivLibro" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </ImageView>
-            <Label styleClass="label-text" stylesheets="@Estilos.css" text="Título libro" />
-            <Label stylesheets="@EstilosUsuario.css" text="Autor" />
-            <Label stylesheets="@EstilosUsuario.css" text="OfertadoPor" />
+            <Label fx:id="lbTituloLibro" styleClass="label-text" stylesheets="@Estilos.css" text="Título libro" />
+            <Label fx:id="lbAutor" stylesheets="@EstilosUsuario.css" text="Autor" />
+            <Label fx:id="lbComerciante" stylesheets="@EstilosUsuario.css" text="OfertadoPor" />
          </children>
       </VBox>
    </children>

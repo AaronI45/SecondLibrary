@@ -9,6 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.json.JSONObject;
+import secondlibrary.util.Utilidades;
 
 
 public class ServicioUsuario {
@@ -60,9 +61,9 @@ public class ServicioUsuario {
             OutputStream output = conexion.getOutputStream();
             output.write(datos.getBytes("UTF-8"));
             output.flush();
-            output.close();;
+            output.close();
             if (conexion.getResponseCode() == 200) {
-                JSONObject respuestaJsonObjeto = getJsonObject(conexion);
+                JSONObject respuestaJsonObjeto = new JSONObject(Utilidades.obtenerRespuesta(conexion.getInputStream()));
                 int idUsuario = respuestaJsonObjeto.getInt("idUsuario");
                 int estadoUsuario = respuestaJsonObjeto.getInt("Estado_usuario_idEstado_usuario");
                 int tipoUsuario = respuestaJsonObjeto.getInt("Tipo_Usuario_idTipo_Usuario");
@@ -72,7 +73,7 @@ public class ServicioUsuario {
                 String apellidoMaterno = respuestaJsonObjeto.getString("apellidoMaterno");
                 String matricula = respuestaJsonObjeto.getString("matricula");
                 String correo = respuestaJsonObjeto.getString("correo");
-                String token = conexion.getHeaderField("x-token");
+                String token = conexion.getHeaderField("token");
 
                 usuario = new Usuario();
                 usuario.setIdUsuario(idUsuario);
@@ -95,17 +96,42 @@ public class ServicioUsuario {
         return usuario;
     }
 
-    private static JSONObject getJsonObject(HttpURLConnection conexion) throws IOException {
-        Reader entrada = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
-        StringBuilder sb = new StringBuilder();
-        for (int c; (c = entrada.read()) >= 0; ) {
-            sb.append((char) c);
+    public static Usuario getUsuarioPorId(int id) throws IOException{
+        Usuario usuario = null;
+        try {
+            URL url = new URL("http://127.0.0.1:8081/api/v1/usuarios/" + id);
+            HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
+            conexion.setRequestMethod("GET");
+            if(conexion.getResponseCode() == 200){
+                JSONObject respuesta = new JSONObject(Utilidades.obtenerRespuesta(conexion.getInputStream()));
+                int idUsuario = respuesta.getInt("idUsuario");
+                int estadoUsuario = respuesta.getInt("Estado_usuario_idEstado_usuario");
+                int tipoUsuario = respuesta.getInt("Tipo_Usuario_idTipo_Usuario");
+                String nombreUsuarioLogin = respuesta.getString("nombreUsuario");
+                String nombre = respuesta.getString("nombre");
+                String apellidoPaterno = respuesta.getString("apellidoPaterno");
+                String apellidoMaterno = respuesta.getString("apellidoMaterno");
+                String matricula = respuesta.getString("matricula");
+                String correo = respuesta.getString("correo");
+                String token = conexion.getHeaderField("token");
+
+                usuario = new Usuario();
+                usuario.setIdUsuario(idUsuario);
+                usuario.setIdEstadoUsuario(estadoUsuario);
+                usuario.setIdRol(tipoUsuario);
+                usuario.setNombreUsuario(nombreUsuarioLogin);
+                usuario.setNombre(nombre);
+                usuario.setApellidoPaterno(apellidoPaterno);
+                usuario.setApellidoMaterno(apellidoMaterno);
+                usuario.setMatricula(matricula);
+                usuario.setCorreo(correo);
+            }
+        }catch (MalformedURLException ex) {
+            Logger.getLogger(ServicioUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ServicioUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            throw new IOException();
         }
-        String respuestaJson = sb.toString();
-        JSONObject respuestaJsonObjeto = new JSONObject(respuestaJson);
-        int idUsuario = respuestaJsonObjeto.getInt("idUsuario");
-        int estado = respuestaJsonObjeto.getInt("Estado_usuario_idEstado_usuario");
-        int tipoUsuario = respuestaJsonObjeto.getInt("Tipo_Usuario_idTipo_Usuario");
-        return respuestaJsonObjeto;
+        return usuario;
     }
 }

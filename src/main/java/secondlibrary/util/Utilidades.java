@@ -8,7 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.Optional;
 
 public class Utilidades {
@@ -48,5 +48,15 @@ public class Utilidades {
             System.err.println("ERROR: " + ex.getMessage());
         }
         return escena;
+    }
+
+    public static String obtenerRespuesta (InputStream conexion) throws IOException{
+        Reader entrada = new BufferedReader(new InputStreamReader(conexion));
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int c; (c = entrada.read()) >= 0;){
+            stringBuilder.append((char)c);
+        }
+        conexion.close();
+        return stringBuilder.toString();
     }
 }

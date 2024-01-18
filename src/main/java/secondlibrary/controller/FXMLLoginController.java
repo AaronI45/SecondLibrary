@@ -1,11 +1,16 @@
 package secondlibrary.controller;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 import domain.Usuario;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 import secondlibrary.util.Utilidades;
 import servicios.ServicioUsuario;
 import javafx.event.ActionEvent;
@@ -43,7 +48,16 @@ public class FXMLLoginController implements Initializable {
             try {
                 Usuario usuarioLogin = servicioUsuario.iniciarSesion(nombreUsuario, contrasena);
                 if (usuarioLogin != null) {
-                    Utilidades.cambiarVentana("Inicio", (Node) event.getSource(), "/secondlibrary/view/FXMLMenuPrincipal.fxml");
+                    FXMLLoader accesoControlador = new FXMLLoader();
+                    accesoControlador.setLocation(getClass().getResource("/secondlibrary/view/FXMLMenuPrincipal.fxml"));
+                    Parent vista = accesoControlador.load();
+
+                    Scene vistaMenu = new Scene(vista);
+                    Stage ventanaActual =(Stage) tfUsuario.getScene().getWindow();
+
+                    FXMLMenuPrincipalController controlador = accesoControlador.getController();
+                    controlador.inicializarUsuario(usuarioLogin);
+                    ventanaActual.setScene(vistaMenu);
                 } else {
                     Utilidades.mostrarAlertaSimple("Usuario o contraseña incorrectos", "Las credenciales ingresadas no son correctas", Alert.AlertType.INFORMATION);
                 }

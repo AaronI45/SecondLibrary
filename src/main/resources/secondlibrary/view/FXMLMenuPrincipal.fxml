@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" styleClass="background-color" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.controller.FXMLMenuPrincipalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" styleClass="background-color" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.controller.FXMLMenuPrincipalController">
    <top>
       <AnchorPane prefHeight="110.0" prefWidth="970.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,12 +39,12 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <TextField prefHeight="35.0" prefWidth="50.0" HBox.hgrow="ALWAYS">
+                              <TextField fx:id="tfBusqueda" prefHeight="35.0" prefWidth="50.0" promptText="Búsqueda por ISBN" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                               </TextField>
-                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#clicBuscar" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/icons8_search_144px.png" />
                                  </image>
@@ -60,7 +60,7 @@
                               <Image url="@../images/icons8_user_512px_1.png" />
                            </image>
                         </ImageView>
-                        <Label alignment="CENTER" text="Test" />
+                        <Label fx:id="lbNombreUsuario" alignment="CENTER" text="Test" />
                      </children>
                      <HBox.margin>
                         <Insets />
@@ -84,7 +84,7 @@
             <Region />
             <ScrollPane stylesheets="@Estilos.css" VBox.vgrow="ALWAYS">
                <content>
-                  <GridPane alignment="CENTER" hgap="18.0" styleClass="transparent" stylesheets="@Estilos.css" vgap="15.0">
+                  <GridPane fx:id="gpIntercambios" alignment="CENTER" hgap="18.0" styleClass="transparent" stylesheets="@Estilos.css" vgap="15.0">
                      <columnConstraints>
                         <ColumnConstraints />
                      </columnConstraints>
