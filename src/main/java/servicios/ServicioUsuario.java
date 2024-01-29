@@ -13,7 +13,27 @@ import secondlibrary.util.Utilidades;
 
 
 public class ServicioUsuario {
-    
+
+    public static float getCalificacionPorId(int idUsuario) throws IOException{
+        float respuesta = 0;
+        try {
+            URL url = new URL("http://127.0.0.1:8081/api/v1/comentarios/comerciantes/calificacion/" + idUsuario);
+            HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
+            conexion.setRequestMethod("GET");
+            if(conexion.getResponseCode() ==2 ){
+                JSONObject res = new JSONObject(Utilidades.obtenerRespuesta(conexion.getInputStream()));
+                float promedio = res.getFloat("promedio");
+                respuesta = promedio;
+            }
+        }catch(MalformedURLException ex) {
+            Logger.getLogger(ServicioUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ServicioUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            throw new IOException();
+        }
+        return respuesta;
+    }
+
     public int registrarUsuario(Usuario nuevoUsuario) throws IOException{
         int respuesta = 0;
         try{

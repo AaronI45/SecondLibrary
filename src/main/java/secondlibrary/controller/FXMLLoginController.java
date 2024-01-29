@@ -57,6 +57,7 @@ public class FXMLLoginController implements Initializable {
 
                     FXMLMenuPrincipalController controlador = accesoControlador.getController();
                     controlador.inicializarUsuario(usuarioLogin);
+                    controlador.inicializarValores();
                     ventanaActual.setScene(vistaMenu);
                 } else {
                     Utilidades.mostrarAlertaSimple("Usuario o contraseña incorrectos", "Las credenciales ingresadas no son correctas", Alert.AlertType.INFORMATION);

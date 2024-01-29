@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.Rating?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" styleClass="background-color" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="970.0" styleClass="background-color" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="secondlibrary.controller.FXMLOrganizarIntercambioController">
    <left>
       <VBox prefHeight="590.0" prefWidth="300.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
@@ -54,7 +54,7 @@
                <children>
                   <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/user-line.png" />
+                        <Image url="@../images/icons8_user_512px_1.png" />
                      </image>
                   </ImageView>
                   <Label styleClass="label-text" stylesheets="@Estilos.css" text="Nombre del comerciante:">
@@ -68,7 +68,7 @@
                      </font></Label>
                   <Label fx:id="lbMatricula" stylesheets="@EstilosUsuario.css" text="Label" />
                   <Label styleClass="label-text" text="Calificación:" />
-                  <Rating fx:id="calificacion" partialRating="true" prefWidth="126.0" rating="2.5" />
+                  <Rating fx:id="calificacion" disable="true" partialRating="true" prefWidth="126.0" rating="2.5" />
                </children>
             </VBox>
          </children>
@@ -81,7 +81,7 @@
       <VBox alignment="CENTER" fillWidth="false" prefHeight="590.0" prefWidth="266.0" spacing="30.0" styleClass="background-color-secondary" stylesheets="@Estilos.css" BorderPane.alignment="CENTER">
          <children>
             <Label styleClass="label-subheader" stylesheets="@Estilos.css" text="Intercambia por: (introduce el isbn de tu libro)" />
-            <TextField alignment="CENTER" prefHeight="24.0" prefWidth="350.0" stylesheets="@Estilos.css" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="tfIsbn" alignment="CENTER" prefHeight="24.0" prefWidth="350.0" stylesheets="@Estilos.css" VBox.vgrow="ALWAYS" />
             <Button defaultButton="true" mnemonicParsing="false" onAction="#clicOrganizarIntercambio" text="Organizar intercambio" />
          </children>
          <BorderPane.margin>
